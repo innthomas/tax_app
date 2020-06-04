@@ -12,6 +12,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String dropDownValue = 'one';
+  //final List<int> _nchildren = [1, 2];
+  //final List<int> _nrelatives = [1, 2];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,16 +28,21 @@ class _MyAppState extends State<MyApp> {
             children: <Widget>[
               Spacer(),
               Text("Enter your full name: "),
+              TextField(),
               Spacer(),
               Text("what is your tax identification number?"),
+              TextField(),
               Spacer(),
               Text("Enter your gross income"),
+              TextField(),
               Spacer(),
               Text("How many children do you have?"),
-              DropdownButton(items: null, onChanged: null),
               Spacer(),
               Text("How many dependent relatives do you have?"),
-              DropdownButton(items: null, onChanged: null),
+              DropdownButton(
+                items: null,
+                onChanged: null,
+              ),
               Spacer(),
               RaisedButton(
                   child: Text("compute tax"),
